@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-prod": "node dist/bundle.js",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "prod-start": "node dist/bundle.js"
   },
   "keywords": [],
   "author": "",

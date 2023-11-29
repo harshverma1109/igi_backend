@@ -1,11 +1,12 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./index.js", // Entry point of your application
+  target: "node",
+  entry: "./index.js", // Adjust the entry point according to your project structure
   output: {
-    path: path.resolve(__dirname, "dist"), // Output directory
-    filename: "bundle.js", // Output bundle file
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
-  mode: "production", // Set the mode to 'production'
-  // Other configurations as needed
+  mode: "production",
+  // Add any necessary loaders, plugins, or other configurations
 };
