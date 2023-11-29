@@ -7,8 +7,8 @@ const authRoutes = require("./auth/routes/auth");
 const profileRoutes = require("./profile/routes/profile");
 const passport = require("passport");
 const FacebookTokenStrategy = require("passport-facebook-token");
-const fs = require("fs");
-const https = require("https");
+// const fs = require("fs");
+// const https = require("https");
 
 app.post(
   "/auth/facebook/token",
@@ -84,11 +84,15 @@ app.post("/setFBTokens", (req, res) => {
   app.use(passport.initialize());
 });
 
-const options = {
-  key: fs.readFileSync("server.key"),
-  cert: fs.readFileSync("server.cert"),
-};
+// const options = {
+//   key: fs.readFileSync("server.key"),
+//   cert: fs.readFileSync("server.cert"),
+// };
 
-https.createServer(options, app).listen(port, () => {
-  console.log(`Server is running on https://localhost:${port}`);
+// https.createServer(options, app).listen(port, () => {
+//   console.log(`Server is running on https://localhost:${port}`);
+// });
+
+app.listen(3000, () => {
+  console.log("listening");
 });
