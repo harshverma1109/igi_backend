@@ -8,12 +8,6 @@
         "src": "./dist/bundle.js",
         "use": "@vercel/node"
       }
-    ],
-    "routes":[
-      {
-        "src":"/(.*)",
-        "dest":"/"
-      }
     ]
   }
   
