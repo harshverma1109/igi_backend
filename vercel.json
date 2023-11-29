@@ -1,16 +1,13 @@
 {
     "version": 2,
+    "env": {
+        "SECRET_KEY":"IGIJWT"
+    },
     "builds": [
       {
-        "src": "./index.js",
+        "src": "./dist/bundle.js",
         "use": "@vercel/node"
       }
-    ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"/"
-        }
     ]
   }
   
